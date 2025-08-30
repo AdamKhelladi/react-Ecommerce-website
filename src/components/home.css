@@ -1,41 +1,136 @@
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: red;
 }
 
 .navbar-container .on-left {
-  
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .navbar-container .logo-name a {
   font-size: 30px;
-  font-weight: 800;
-  letter-spacing: -1.5px;
+  font-weight: 700;
   text-decoration: none;
-  color: #111;
+  color: #ff0000;
 }
 
 .navbar-container .links ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 50px;
 }
 
 .navbar-container .links ul a {
   text-decoration: none;
   font-size: 18px;
-  font-weight: 400;
-  color: #111;
+  font-weight: 500;
+  color: #666;
+  transition: 0.3s;
+}
+.navbar-container .links ul a:hover {
+  color: #000;
+}
+
+.navbar-container .on-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-container .navbar-search {
+  position: relative;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-container .navbar-search input {
+  border-radius: 24px;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #666;
+  outline: none;
+  width: 100%;
+  animation: show-input 0.2s linear;
+}
+
+.navbar-container .navbar-search .search-icon {
+  font-size: 25px;
+  position: absolute;
+  color: #666;
+  right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar-container .navbar-search .search-icon:hover {
+  color: #ff0000;
 }
 
 .navbar-container .icons {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@keyframes show-input {
+  from {
+    width: 40%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-container {
+    max-width: 100%;
+    padding: 10px 24px;
+  }
+  .navbar-container .links ul {
+    gap: 20px;
+  }
+  .navbar-container .on-right {
+    gap: 10px;
+  }
+  .navbar-container .navbar-search {
+    width: 180px;
+    margin-left: 10px;
+  }
+  .navbar-container .navbar-search input {
+    border-radius: 24px;
+    padding: 7px 12px;
+    font-size: 14px;
+  }
+  .navbar-container .navbar-search .search-icon {
+    font-size: 22px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 20px 16px;
+  }
+  .navbar-container .links {
+    display: none;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 500px) {
+  .navbar-container {
+    padding: 20px 12px;
+  }
+  .navbar-container .navbar-search {
+    display: none;
+  }
 }
