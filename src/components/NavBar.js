@@ -1,6 +1,8 @@
 import { IoMdSearch } from "react-icons/io";
 import "./home.css";
 import { useState } from "react";
+import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 export default function NavBar() {
   const MenuLinks = [
@@ -50,7 +52,9 @@ export default function NavBar() {
       </div>
       <div className="on-right">
         <div className="navbar-search">
-          {showInputSearch ? <input type="text" placeholder="Search Products.." /> : null}
+          {showInputSearch ? (
+            <input type="text" placeholder="Search Products.." />
+          ) : null}
 
           <IoMdSearch
             className="search-icon"
@@ -60,8 +64,13 @@ export default function NavBar() {
           />
         </div>
         <div className="icons">
-          <div className="icon-1">Icon One</div>
-          <div className="icon-2">Icon Two</div>
+          <button className="cart-icon">
+            <FaCartShopping className="cart-shopping" />
+            <div className="orders">4</div>
+          </button>
+          <div className="dark-mode">
+            <DarkMode />
+          </div>
         </div>
       </div>
     </div>
