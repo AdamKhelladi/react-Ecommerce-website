@@ -1,7 +1,7 @@
 import { IoMdSearch } from "react-icons/io";
 import "./home.css";
 import { useState } from "react";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
 
 export default function NavBar() {
@@ -28,10 +28,37 @@ export default function NavBar() {
     },
   ];
 
+  const DropdownLinks = [
+    {
+      id: 1,
+      name: "Trending Products",
+      link: "/#",
+    },
+    {
+      id: 2,
+      name: "Best Selling",
+      link: "/#",
+    },
+    {
+      id: 3,
+      name: "Top Rated",
+      link: "/#",
+    },
+  ];
+
   const [showInputSearch, setShowInputSearch] = useState(false);
+  const [showQuickLinks, setShowQuickLinks] = useState(false);
 
   function handleClickSearch() {
     setShowInputSearch(!showInputSearch);
+  }
+
+  function handleEnterQuickLinks() {
+    setShowQuickLinks(true);
+  }
+
+  function handleLeaveQuickLinks() {
+    setShowQuickLinks(false);
   }
 
   return (
@@ -41,12 +68,40 @@ export default function NavBar() {
           <a href="#">ESHOP</a>
         </div>
         <div className="links">
-          <ul>
+          <ul className="ul-links">
             {MenuLinks.map((item) => (
-              <li key={item.id}>
+              <li className="ul-links-item" key={item.id}>
                 <a href={item.link}>{item.name}</a>
               </li>
             ))}
+
+            <li
+              className="quick-links"
+              onMouseEnter={() => {
+                handleEnterQuickLinks();
+              }}
+              onMouseLeave={() => {
+                handleLeaveQuickLinks();
+              }}
+            >
+              <div className="quick-links-name">
+                <a href="#">Quick Links</a>
+                <span>
+                  <FaCaretDown className={showQuickLinks ? "caret-down rotat-caret" : "caret-down"} />
+                </span>
+              </div>
+              {showQuickLinks ? (
+                <div className="dropdown-menu">
+                  <ul>
+                    {DropdownLinks.map((item) => (
+                      <li key={item.id}>
+                        <a href={item.link}>{item.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </li>
           </ul>
         </div>
       </div>

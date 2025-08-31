@@ -6,22 +6,24 @@
   --text-secondary: #666;
   --border-color: #e5e7eb;
   --accent-color: #ff0000;
+  --bg-hover: #ff000054;
 }
 
 .dark {
   /* Dark theme */
-  --bg-primary: #1f2937;
+  --bg-primary: #151d29;
   --bg-secondary: #374151;
   --text-primary: #ffffff;
   --text-secondary: #bcbfc4;
   --border-color: #6b7280;
   --accent-color: #ff0000;
+  --bg-hover: #14325f59;
 }
 
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,22 +45,73 @@
   user-select: none;
 }
 
-.navbar-container .links ul {
+.navbar-container .links .ul-links {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 50px;
 }
 
-.navbar-container .links ul a {
+.navbar-container .links .ul-links a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   color: var(--text-secondary);
   transition: 0.3s;
 }
-.navbar-container .links ul a:hover {
+.navbar-container .links .ul-links .ul-links-item a:hover {
   color: var(--text-primary);
+}
+
+.navbar-container .links .ul-links .quick-links-name {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.navbar-container .links .ul-links .quick-links-name:hover a {
+  color: var(--text-secondary) !important;
+}
+
+.navbar-container .links .ul-links .caret-down {
+  color: var(--text-secondary);
+  transition: .3s;
+}
+
+.navbar-container .links .ul-links .rotat-caret {
+  transform: rotate(180deg);
+}
+
+.navbar-container .quick-links {
+  position: relative;
+  padding: 10px 0;
+}
+
+.navbar-container .quick-links .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-primary);
+  border-radius: 16px;
+  width: 200px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar-container .quick-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  flex-direction: column;
+}
+.navbar-container .quick-links ul li {
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+.navbar-container .quick-links ul li:hover {
+  background-color: var(--bg-hover);
 }
 
 .navbar-container .on-right {
@@ -171,8 +224,11 @@
     max-width: 100%;
     padding: 10px 24px;
   }
-  .navbar-container .links ul {
+  .navbar-container .links .ul-links {
     gap: 20px;
+  }
+  .navbar-container .on-left {
+    gap: 0;
   }
   .navbar-container .on-right {
     gap: 10px;
@@ -195,6 +251,9 @@
 @media (max-width: 768px) {
   .navbar-container {
     padding: 20px 16px;
+  }
+  .navbar-container .navbar-search {
+    width: 220px;
   }
   .navbar-container .links {
     display: none;
