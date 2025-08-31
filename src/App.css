@@ -1,0 +1,10 @@
+.App {
+  min-height: 100vh;
+  background-color: #fdfdfd;
+  transition: background-color 0.3s ease;
+}
+
+.dark .App {
+  background-color: #1f2937;
+  color: #fff;
+}

@@ -1,3 +1,23 @@
+:root {
+  /* Light theme */
+  --bg-primary: #fdfdfd;
+  --bg-secondary: #fff;
+  --text-primary: #111;
+  --text-secondary: #666;
+  --border-color: #e5e7eb;
+  --accent-color: #ff0000;
+}
+
+.dark {
+  /* Dark theme */
+  --bg-primary: #1f2937;
+  --bg-secondary: #374151;
+  --text-primary: #ffffff;
+  --text-secondary: #bcbfc4;
+  --border-color: #6b7280;
+  --accent-color: #ff0000;
+}
+
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -19,7 +39,7 @@
   font-size: 30px;
   font-weight: 700;
   text-decoration: none;
-  color: #ff0000;
+  color: var(--accent-color);
   user-select: none;
 }
 
@@ -34,11 +54,11 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  color: #666;
+  color: var(--text-secondary);
   transition: 0.3s;
 }
 .navbar-container .links ul a:hover {
-  color: #000;
+  color: var(--text-primary);
 }
 
 .navbar-container .on-right {
@@ -60,28 +80,30 @@
   padding: 10px 15px;
   font-size: 15px;
   font-weight: 500;
-  border: 1px solid #666;
+  border: 1px solid var(--text-secondary);
   outline: none;
   width: 100%;
   animation: show-input 0.2s linear;
+  background-color: transparent;
+  color: var(--text-primary);
 }
 
 .navbar-container .navbar-search .search-icon {
   font-size: 25px;
   position: absolute;
-  color: #666;
+  color: var(--text-secondary);
   right: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
 .navbar-container .navbar-search .search-icon:hover {
-  color: #ff0000;
+  color: var(--accent-color);
 }
 
 .navbar-container .icons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .navbar-container .cart-icon {
@@ -95,12 +117,12 @@
 
 .navbar-container .cart-shopping {
   font-size: 23px;
-  color: #666;
+  color: var(--text-secondary);
   transition: 0.3s;
   cursor: pointer;
 }
 .navbar-container .cart-shopping:hover {
-  color: #000;
+  color: var(--text-primary);
 }
 
 .navbar-container .orders {
@@ -108,7 +130,7 @@
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #ff0000;
+  background-color: var(--accent-color);
   color: #fff;
   width: 18px;
   height: 18px;
@@ -119,6 +141,18 @@
   font-size: 12px;
   font-weight: bold;
   line-height: 1;
+}
+
+.navbar-container .theme-button {
+  width: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, opacity 0.15s ease;
+}
+.navbar-container .theme-button.animating {
+  opacity: 0.5;
+  /* transform: scale(0.9); */
 }
 
 /* Animations */
