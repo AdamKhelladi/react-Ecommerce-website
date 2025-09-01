@@ -71,6 +71,7 @@
 .hero-container .slider-content .slide-img img {
   margin-right: 90px;
   width: 460px;
+  filter: drop-shadow(-8px 4px 6px rgba(0, 0, 0, 0.4));
 }
 
 /* Media Responsive */
