@@ -1,8 +1,8 @@
 import { IoMdSearch } from "react-icons/io";
-import "./home.css";
+import "./NavBar.css";
 import { useState } from "react";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
-import DarkMode from "./DarkMode";
+import DarkMode from "../DarkMode";
 
 export default function NavBar() {
   const MenuLinks = [
