@@ -1,0 +1,23 @@
+:root {
+  /* Light theme */
+  --bg-primary: #fdfdfd;
+  --bg-secondary: #fff;
+  --text-primary: #111;
+  --text-secondary: #666;
+  --border-color: #e5e7eb;
+  --accent-color: #ff0000;
+}
+
+.dark {
+  /* Dark theme */
+  --bg-primary: #151d29;
+  --bg-secondary: #374151;
+  --text-primary: #ffffff;
+  --text-secondary: #bcbfc4;
+  --border-color: #6b7280;
+  --accent-color: #ff0000;
+}
+
+.hero-container {
+  background-color: red;
+}
