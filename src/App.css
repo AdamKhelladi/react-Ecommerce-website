@@ -22,9 +22,37 @@
   min-height: 100vh;
   background-color: var(--bg-primary);
   transition: background-color 0.3s ease;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  font-family: "Oswald", sans-serif;
 }
 
 .dark .App {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+}
+
+/* Media Responsive */
+@media (max-width: 992px) {
+  .App {
+    max-width: 100%;
+    padding: 10px 24px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px 16px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 500px) {
+  .App {
+    padding: 20px 12px;
+  }
 }

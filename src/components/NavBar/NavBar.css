@@ -21,9 +21,6 @@
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,7 +202,6 @@
 }
 .navbar-container .theme-button.animating {
   opacity: 0.5;
-  /* transform: scale(0.9); */
 }
 
 /* Animations */
@@ -220,10 +216,6 @@
 
 /* Media Responsive */
 @media (max-width: 992px) {
-  .navbar-container {
-    max-width: 100%;
-    padding: 10px 24px;
-  }
   .navbar-container .links .ul-links {
     gap: 20px;
   }
@@ -249,9 +241,6 @@
 
 /* Mobile landscape */
 @media (max-width: 768px) {
-  .navbar-container {
-    padding: 20px 16px;
-  }
   .navbar-container .navbar-search {
     width: 220px;
   }
@@ -262,9 +251,6 @@
 
 /* Mobile portrait */
 @media (max-width: 500px) {
-  .navbar-container {
-    padding: 20px 12px;
-  }
   .navbar-container .navbar-search {
     display: none;
   }
