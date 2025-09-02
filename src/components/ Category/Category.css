@@ -1,5 +1,202 @@
 .category-container {
-  height: 100vh;
-  background-color: red;
+  height: calc(100vh - 20px);
   margin-top: 30px;
+  padding: 10px 0;
 }
+
+.category-container .boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 70px;
+  column-gap: 30px;
+  height: 100%;
+}
+
+.category-container .boxes .wide {
+  grid-column: span 2;
+}
+
+.category-container .boxes .box {
+  position: relative;
+  padding: 0 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 24px;
+}
+
+.category-container .boxes .box:nth-child(1) {
+  background: linear-gradient(135deg, #000, #ff0000);
+}
+.category-container .boxes .box:nth-child(2) {
+  background: linear-gradient(135deg, #ffbb00, #be9d06);
+}
+.category-container .boxes .box:nth-child(3) {
+  background: linear-gradient(135deg, #ff0062, #a30023);
+}
+.category-container .boxes .box:nth-child(4) {
+  background: linear-gradient(135deg, #000, #424242);
+}
+.category-container .boxes .box:nth-child(5) {
+  background: linear-gradient(135deg, #00ffbf, #003f31);
+}
+.category-container .boxes .box:nth-child(6) {
+  background: linear-gradient(135deg, #0018ee, #000f64);
+}
+
+.category-container .boxes .box p:nth-child(1) {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  margin-top: 60px;
+}
+
+.category-container .boxes .box p:nth-child(2) {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.category-container .boxes .box p:nth-child(3) {
+  color: #ffffff65;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.category-container .boxes .box .browse-btn {
+  border: none;
+  outline: none;
+  padding: 6px 20px;
+  border-radius: 24px;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+  position: relative;
+  z-index: 99;
+}
+.category-container .boxes .box .browse-btn:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.category-container .boxes .box img {
+  width: 250px;
+  position: absolute;
+  top: 15%;
+  right: 0;
+}
+.category-container .boxes .box:nth-child(3) img {
+  width: 300px;
+  right: 5%;
+  top: 0%;
+}
+.category-container .boxes .box:nth-child(5) img {
+  width: 270px;
+  right: -5%;
+  top: 24%;
+}
+.category-container .boxes .box:nth-child(6) img {
+  width: 210px;
+  top: 30%;
+}
+
+/* @media (max-width: 1100px) {
+  .category-container {
+    height: 100%;
+  }
+  .category-container .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 70px;
+    column-gap: 30px;
+    height: 100%;
+  }
+  .category-container .boxes .box {
+    padding: 20px 20px;
+    overflow: hidden;
+  }
+
+  .category-container .boxes .box img {
+    width: 220px;
+    position: absolute;
+    top: 15%;
+    right: 0;
+  }
+  .category-container .boxes .box:nth-child(1) img {
+    width: 280px;
+    right: 10%;
+    top: 0%;
+  }
+  .category-container .boxes .box:nth-child(2) img {
+    width: 280px;
+    right: 0%;
+    top: 10%;
+  }
+  .category-container .boxes .box:nth-child(3) img {
+    width: 280px;
+    right: 10%;
+    top: 0%;
+  }
+  .category-container .boxes .box:nth-child(4) img {
+    width: 250px;
+    right: 8%;
+    top: 7%;
+  }
+  .category-container .boxes .box:nth-child(5) img {
+    width: 270px;
+    right: -2%;
+    top: 24%;
+  }
+  .category-container .boxes .box:nth-child(6) img {
+    width: 210px;
+    right: 5%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 667px) {
+  .category-container .boxes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+    column-gap: 30px;
+    height: 100%;
+  }
+  .category-container .boxes .wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 460px) {
+  .category-container .boxes .box:nth-child(2) img {
+    width: 300px;
+    right: -3%;
+  }
+  .category-container .boxes .box:nth-child(3) img {
+    width: 250px;
+    right: 0%;
+    top: 0%;
+  }
+  .category-container .boxes .box:nth-child(4) img {
+    width: 200px;
+    right: 0%;
+    top: 12%;
+  }
+  .category-container .boxes .box:nth-child(5) img {
+    width: 270px;
+    right: -2%;
+    top: 24%;
+  }
+  .category-container .boxes .box:nth-child(6) img {
+    width: 210px;
+    right: 5%;
+    top: 20%;
+  }
+} */
