@@ -66,6 +66,7 @@
 }
 .hero-container .slider-content .details button:hover {
   background-color: var(--accent-color-hover);
+  transform: scale(1.05);
 }
 
 .hero-container .slider-content .slide-img img {
