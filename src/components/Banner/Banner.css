@@ -115,7 +115,7 @@
   }
 }
 
-/* @media (max-width: 450px) {
+@media (max-width: 450px) {
   .banner-container {
     padding: 30px 20px;
   }
@@ -126,4 +126,4 @@
     width: 300px;
     filter: drop-shadow(-8px 4px 6px rgba(0, 0, 0, 0.7));
   }
-} */
+}
