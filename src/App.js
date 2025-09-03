@@ -1,5 +1,6 @@
 import "./App.css";
 import Category from "./components/ Category/Category";
+import Banner from "./components/Banner/Banner";
 import Hero from "./components/Hero/Hero";
 import NavBar from "./components/NavBar/NavBar";
 import Services from "./components/Services/Services";
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Category />
         <Services />
+        <Banner />
       </div>
     </div>
   );

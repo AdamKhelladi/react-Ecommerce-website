@@ -1,0 +1,129 @@
+.banner-container {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1f0000, #ff2424, #1f0000);
+  border-radius: 24px;
+  color: #fff;
+  padding: 40px;
+  margin-bottom: 100px;
+}
+
+.banner-container .left-details {
+  height: 100%;
+  width: 20%;
+}
+
+.banner-container .left-details h1 {
+  font-size: 75px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.banner-container .left-details p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.banner-container .right-details {
+  height: 100%;
+  width: 25%;
+}
+
+.banner-container .right-details h1 {
+  font-size: 53px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.banner-container .right-details p.first-p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.banner-container .right-details p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.banner-container .right-details .banner-btn {
+  border: none;
+  outline: none;
+  padding: 6px 20px;
+  border-radius: 24px;
+  background: #fff;
+  color: var(--accent-color);
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+.banner-container .right-details .banner-btn:hover {
+  transform: scale(1.05);
+}
+
+.banner-container .banner-img {
+  position: absolute;
+  left: 30%;
+}
+.banner-container .banner-img img {
+  width: 450px;
+  filter: drop-shadow(-8px 4px 6px rgba(0, 0, 0, 0.7));
+}
+
+@media (max-width: 1100px) {
+  .banner-container .left-details h1 {
+    font-size: 55px;
+  }
+  .banner-container .right-details h1 {
+    font-size: 45px;
+    margin: 15px 0;
+  }
+  .banner-container .banner-img img {
+    width: 350px;
+    filter: drop-shadow(-8px 4px 6px rgba(0, 0, 0, 0.7));
+  }
+}
+
+@media (max-width: 830px) {
+  .banner-container {
+    flex-direction: column;
+  }
+  .banner-container .left-details {
+    width: 100%;
+  }
+  .banner-container .left-details h1 {
+    font-size: 45px;
+  }
+  .banner-container .right-details {
+    width: 100%;
+  }
+  .banner-container .right-details h1 {
+    font-size: 38px;
+    margin: 10px 0;
+  }
+  .banner-container .banner-img {
+    position: static;
+  }
+  .banner-container .banner-img img {
+    width: 380px;
+    filter: drop-shadow(-8px 4px 6px rgba(0, 0, 0, 0.7));
+  }
+}
+
+/* @media (max-width: 450px) {
+  .banner-container {
+    padding: 30px 20px;
+  }
+  .banner-container .banner-img {
+    margin: 35px 0;
+  }
+  .banner-container .banner-img img {
+    width: 300px;
+    filter: drop-shadow(-8px 4px 6px rgba(0, 0, 0, 0.7));
+  }
+} */
