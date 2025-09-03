@@ -7,6 +7,7 @@ import Services from "./components/Services/Services";
 
 import image1 from "../src/assets/hero/headphone.png";
 import image2 from "../src/assets/category/smartwatch2-removebg-preview.png";
+import Products from "./components/Products/Products";
 
 const bannerOneData = {
   discount: "30% OFF",
@@ -42,6 +43,7 @@ function App() {
         <Category />
         <Services />
         <Banner bannerData={bannerOneData} />
+        <Products />
         <Banner bannerData={bannerTwoData} />
       </div>
     </div>
