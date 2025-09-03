@@ -4,11 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #1f0000, #ff2424, #1f0000);
   border-radius: 24px;
   color: #fff;
   padding: 40px;
   margin-bottom: 100px;
+}
+.banner-container.red {
+  background: linear-gradient(135deg, #1f0000, #ff2424, #1f0000);
+}
+.banner-container.green {
+  background: linear-gradient(135deg, #002c16, #24ff91, #002c16);
 }
 
 .banner-container .left-details {
@@ -55,7 +60,6 @@
   padding: 6px 20px;
   border-radius: 24px;
   background: #fff;
-  color: var(--accent-color);
   font-size: 17px;
   font-weight: 500;
   cursor: pointer;
@@ -64,6 +68,12 @@
 }
 .banner-container .right-details .banner-btn:hover {
   transform: scale(1.05);
+}
+.banner-container .right-details .banner-btn.red {
+  color: var(--accent-color);
+}
+.banner-container .right-details .banner-btn.green {
+  color: rgb(0, 194, 87);
 }
 
 .banner-container .banner-img {

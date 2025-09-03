@@ -1,25 +1,37 @@
-import image from "../../assets/hero/headphone.png";
 import "./Banner.css";
 
-export default function Banner() {
+export default function Banner({ bannerData }) {
   return (
-    <div className="banner-container">
+    <div
+      className={
+        bannerData.itemColor === "red"
+          ? "banner-container red"
+          : "banner-container green"
+      }
+    >
       <div className="left-details">
-        <p>30% OFF</p>
-        <h1>Fine Smile</h1>
-        <p>10 Jan to 28 Jan</p>
+        <p>{bannerData.discount}</p>
+        <h1>{bannerData.title}</h1>
+        <p>{bannerData.date}</p>
       </div>
+
       <div className="banner-img">
-        <img src={image} />
+        <img src={bannerData.img} alt={bannerData.title} />
       </div>
+
       <div className="right-details">
-        <p className="first-p">Air Solo Bass</p>
-        <h1>Winter Sale</h1>
-        <p>
-          High-quality sound, deep bass, and all-day comfort. Get yours now at a
-          special price!
-        </p>
-        <button className="banner-btn">Shop Now</button>
+        <p className="first-p">{bannerData.rightSubtitle}</p>
+        <h1>{bannerData.rightTitle}</h1>
+        <p>{bannerData.description}</p>
+        <button
+          className={
+            bannerData.itemColor === "red"
+              ? "banner-btn red"
+              : "banner-btn green"
+          }
+        >
+          {bannerData.buttonText}
+        </button>
       </div>
     </div>
   );
