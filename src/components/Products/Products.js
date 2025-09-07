@@ -8,6 +8,7 @@ import image5 from "../../assets/product/p-5.jpg";
 import image6 from "../../assets/product/p-7.jpg";
 import image7 from "../../assets/product/p-1.jpg";
 import image8 from "../../assets/product/p-9.jpg";
+import { useState } from "react";
 
 const productsData = [
   {
@@ -61,6 +62,25 @@ const productsData = [
 ];
 
 export default function Products() {
+  const [showProductHover, setShowProductHover] = useState(null);
+  const [showButton, setShowButton] = useState(null);
+
+  function handleHoverProduct(productId) {
+    setShowProductHover(productId);
+
+    setTimeout(() => {
+      setShowButton(productId);
+    }, 200);
+  }
+
+  function handleLeaveProduct(productId) {
+    setShowProductHover(null);
+
+    setTimeout(() => {
+      setShowButton(null);
+    }, 200);
+  }
+
   return (
     <div className="products-container">
       <div>
@@ -70,8 +90,25 @@ export default function Products() {
       <div className="boxes">
         {productsData.map((item) => (
           <div key={item.id} className="box">
-            <div className="product-img">
-              <img src={item.img} alt={item.name} />
+            <div
+              className="product-img"
+              onMouseEnter={() => {
+                handleHoverProduct(item.id);
+              }}
+              onMouseLeave={() => {
+                handleLeaveProduct();
+              }}
+            >
+              <img
+                className={
+                  showProductHover === item.id ? "product-hover" : null
+                }
+                src={item.img}
+                alt={item.name}
+              />
+              {showButton === item.id ? (
+                <button className="product-btn">Add to cart</button>
+              ) : null}
             </div>
             <div className="product-details">
               <p>{item.name}</p>
