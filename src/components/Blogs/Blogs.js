@@ -37,7 +37,22 @@ export default function Blogs() {
         <h1 className="blogs-title">Our Blogs</h1>
         <p className="blogs-description">Explore Our Blogs</p>
       </div>
-      <></>
+      <div className="blogs-items">
+        {
+          blogsData.map((blog) => (
+            <div key={blog.id} className="blog">
+              <div className="blog-img">
+                <img src={blog.img} alt={blog.title}/>
+              </div>
+              <div className="date">{blog.date}</div>
+              <div className="details">
+                <h1 className="blog-title">{blog.title}</h1>
+                <p className="blog-description">{blog.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </div>
   );
 }

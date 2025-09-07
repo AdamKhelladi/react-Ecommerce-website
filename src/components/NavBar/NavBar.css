@@ -110,7 +110,7 @@
   padding: 10px 15px;
   font-size: 15px;
   font-weight: 500;
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--border-color);
   outline: none;
   width: 100%;
   animation: show-input 0.2s linear;
