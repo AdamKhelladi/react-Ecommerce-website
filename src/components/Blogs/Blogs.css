@@ -70,11 +70,16 @@
   color: var(--text-secondary);
 }
 
-
 @media (max-width: 800px) {
   .blogs-container .blogs-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogs-container {
+    padding: 200px 0 100px;
   }
 }

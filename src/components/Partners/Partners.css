@@ -1,13 +1,10 @@
-.partners-wrapper {
-  width: 100%;
-  margin-bottom: 200px;
-  overflow: hidden;
-}
-
 .partners-container {
+  width: 100%;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 100px;
 
   position: relative;
   background-color: #ececec;
@@ -71,5 +68,18 @@
   }
   to {
     left: -100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .partners-container img {
+    width: 70px;
+    left: calc(100px * 8);
+  }
+}
+
+@media (max-width: 500px) {
+  .partners-container {
+    height: 70px;
   }
 }
