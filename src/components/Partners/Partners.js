@@ -7,17 +7,13 @@ import image4 from "../../assets/brand/br-4.png";
 import image5 from "../../assets/brand/br-5.png";
 
 export default function Partners() {
-  const images = [image1, image2, image3, image4, image5];
+  const images = [image1, image2, image3, image4, image5, image3, image2, image5];
 
   return (
     <div className="partners-wrapper">
       <div className="partners-container">
         {images.map((img, index) => (
-          <img key={`first-${index}`} src={img} alt="Partner brand" />
-        ))}
-
-        {images.map((img, index) => (
-          <img key={`second-${index}`} src={img} alt="Partner brand" />
+          <img className={`img-${index+1}`} key={`first-${index}`} src={img} alt="Partner brand" />
         ))}
       </div>
     </div>
