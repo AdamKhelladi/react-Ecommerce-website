@@ -1,0 +1,14 @@
+.partners-container {
+  width: 100%;
+  padding: 30px 0;
+  margin-bottom: 100px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 140px;
+}
+
+.partners-container img {
+  width: 100px;
+}

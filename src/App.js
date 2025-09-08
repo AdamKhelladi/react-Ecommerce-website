@@ -20,7 +20,7 @@ const bannerOneData = {
   rightSubtitle: "Air Solo Bass",
   description: "High-quality sound, deep bass, and all-day comfort.",
   buttonText: "Shop Now",
-  itemColor: "red"
+  itemColor: "red",
 };
 
 const bannerTwoData = {
@@ -33,7 +33,7 @@ const bannerTwoData = {
   description:
     "Stay connected and stylish with our latest smartwatch collection.",
   buttonText: "Discover Now",
-  itemColor: "green"
+  itemColor: "green",
 };
 
 function App() {
@@ -48,8 +48,8 @@ function App() {
         <Products />
         <Banner bannerData={bannerTwoData} />
         <Blogs />
-        <Partners />
       </div>
+      <Partners />
     </div>
   );
 }
