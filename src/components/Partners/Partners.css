@@ -28,7 +28,7 @@
   cursor: pointer;
 
   position: absolute;
-  left: 100%;
+  left: max(calc(100px * 8), 100%);
   animation-name: scroll-left;
   animation-duration: 20s;
   animation-timing-function: linear;
@@ -74,12 +74,18 @@
 @media (max-width: 900px) {
   .partners-container img {
     width: 70px;
-    left: calc(100px * 8);
   }
 }
 
 @media (max-width: 500px) {
   .partners-container {
     height: 70px;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0)
+    );
   }
 }
