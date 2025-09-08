@@ -2,6 +2,6 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer-container">Footer</div>
+    <div className="footer-container">Footer component</div>
   )
 }
