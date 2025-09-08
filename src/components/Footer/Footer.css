@@ -1,3 +1,86 @@
 .footer-container {
   padding-top: 150px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-container > div {
+  height: 200px;
+}
+
+.footer-container .logo-name a {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--accent-color);
+  user-select: none;
+}
+
+.footer-container p,
+.footer-container a {
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.footer-container h1 {
+  font-size: 20px;
+  font-weight: 7000;
+}
+
+.footer-container .right-footer {
+  width: 30%;
+}
+
+.footer-container .right-footer .love-msg {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footer-container .right-footer .footer-btn {
+  border: none;
+  outline: none;
+  padding: 6px 20px;
+  border-radius: 24px;
+  background: var(--accent-color);
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+  color: #fff;
+}
+.footer-container .right-footer .footer-btn:hover {
+  transform: scale(1.04);
+}
+.footer-container .right-footer .footer-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-container .left-footer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-container .left-footer > div {
+  height: 100%;
+}
+
+.footer-container .left-footer .imp-links > div,
+.footer-container .left-footer .quick-links > div {
+  padding: 8px 0;
+}
+
+
+.footer-container .left-footer .address > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

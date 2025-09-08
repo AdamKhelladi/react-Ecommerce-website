@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <div className="footer-container">
-      <div>
+      <div className="right-footer">
         <div className="logo-name">
           <a href="#">ESHOP</a>
         </div>
@@ -37,32 +37,42 @@ export default function Footer() {
           alias cum
         </p>
         <div className="love-msg">Made with 💖 by ADAM TECH</div>
-        <button className="footer-btn">Visit our Instagram</button>
+        <button className="footer-btn">
+          <a href="https://www.instagram.com/adxmtech" target="_blanc">
+            Visit My Instagram
+          </a>
+        </button>
       </div>
 
-      <div>
-        <h1>Important Links</h1>
-        {MenuLinks.map((item) => (
-          <a href={item.link}>{item.name}</a>
-        ))}
-      </div>
-
-      <div>
-        <h1>Quick Links</h1>
-        {MenuLinks.map((item) => (
-          <a href={item.link}>{item.name}</a>
-        ))}
-      </div>
-
-      <div>
-        <h1>Address</h1>
-        <div className="location">
-          <FaMapLocationDot />
-          <p>Ras El Oued, Algeria</p>
+      <div className="left-footer">
+        <div className="imp-links">
+          <h1>Important Links</h1>
+          {MenuLinks.map((item) => (
+            <div>
+              <a href={item.link}>{item.name}</a>
+            </div>
+          ))}
         </div>
-        <div className="phone">
-          <IoMdPhonePortrait />
-          <p>+213 1234567890</p>
+
+        <div className="quick-links">
+          <h1>Quick Links</h1>
+          {MenuLinks.map((item) => (
+            <div>
+              <a href={item.link}>{item.name}</a>
+            </div>
+          ))}
+        </div>
+
+        <div className="address">
+          <h1>Address</h1>
+          <div className="location">
+            <FaMapLocationDot />
+            <p>Ras El Oued, Algeria</p>
+          </div>
+          <div className="phone">
+            <IoMdPhonePortrait />
+            <p>+213 1234567890</p>
+          </div>
         </div>
       </div>
     </div>
