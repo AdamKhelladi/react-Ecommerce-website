@@ -1,6 +1,9 @@
 import "./Footer.css";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoMdPhonePortrait } from "react-icons/io";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   const MenuLinks = [
@@ -38,8 +41,8 @@ export default function Footer() {
         </p>
         <div className="love-msg">Made with 💖 by ADAM TECH</div>
         <button className="footer-btn">
-          <a href="https://www.instagram.com/adxmtech" target="_blanc">
-            Visit My Instagram
+          <a href="https://www.github.com/AdamKhelladi" target="_blanc">
+            Visit My GitHub Account
           </a>
         </button>
       </div>
@@ -72,6 +75,11 @@ export default function Footer() {
           <div className="phone">
             <IoMdPhonePortrait />
             <p>+213 1234567890</p>
+          </div>
+          <div className="social-media">
+            <FaSquareInstagram className="social-icon" />
+            <IoLogoYoutube className="social-icon" />
+            <FaLinkedin className="social-icon" />
           </div>
         </div>
       </div>

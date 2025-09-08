@@ -27,7 +27,7 @@
 
 .footer-container h1 {
   font-size: 20px;
-  font-weight: 7000;
+  font-weight: 700;
 }
 
 .footer-container .right-footer {
@@ -78,9 +78,59 @@
   padding: 8px 0;
 }
 
-
 .footer-container .left-footer .address > div {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.footer-container .left-footer .address .social-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.footer-container .left-footer .address .social-media .social-icon {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer-container .social-icon:nth-child(1):hover {
+  color: #f85127;
+}
+.footer-container .social-icon:nth-child(2):hover {
+  color: #d61818;
+}
+.footer-container .social-icon:nth-child(3):hover {
+  color: #3850da;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    flex-direction: column;
+  }
+  .footer-container .right-footer {
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .footer-container .left-footer {
+    width: 100%;
+  }
+  .footer-container h1 {
+    font-size: 17px;
+  }
+  .footer-container .left-footer {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer-container .left-footer > div {
+    text-align: center;
+  }
+  .footer-container .left-footer .address .social-media {
+    justify-content: center;
+  }
 }
