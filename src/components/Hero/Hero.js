@@ -48,14 +48,41 @@ export default function Hero({ handleClickOrder }) {
           {HeroData.map((item) => (
             <div key={item.id} className="slider-content">
               <div className="details">
-                <p>{item.subtitle}</p>
-                <h3>{item.title}</h3>
-                <h1>{item.title2}</h1>
-                <div>
+                <p
+                  data-aos="zoom-out"
+                  data-aos-duration="500"
+                  data-aos-once="true"
+                >
+                  {item.subtitle}
+                </p>
+                <h3
+                  data-aos="zoom-out"
+                  data-aos-duration="500"
+                  data-aos-once="true"
+                >
+                  {item.title}
+                </h3>
+                <h1
+                  data-aos="zoom-out"
+                  data-aos-duration="500"
+                  data-aos-once="true"
+                >
+                  {item.title2}
+                </h1>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  data-aos-offset="0"
+                  data-aos-delay="300"
+                >
                   <button onClick={handleClickOrder}>Shop By Category</button>
                 </div>
               </div>
-              <div className="slide-img">
+              <div
+                data-aos="zoom-out"
+                data-aos-once="true"
+                className="slide-img"
+              >
                 <img src={item.img} />
               </div>
             </div>
