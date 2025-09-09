@@ -28,7 +28,7 @@ const HeroData = [
   },
 ];
 
-export default function Hero() {
+export default function Hero({ handleClickOrder }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -52,11 +52,11 @@ export default function Hero() {
                 <h3>{item.title}</h3>
                 <h1>{item.title2}</h1>
                 <div>
-                  <button>Shop By Category</button>
+                  <button onClick={handleClickOrder}>Shop By Category</button>
                 </div>
               </div>
               <div className="slide-img">
-                <img src={item.img}/>
+                <img src={item.img} />
               </div>
             </div>
           ))}
