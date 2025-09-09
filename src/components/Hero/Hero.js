@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="home">
       <div>
         <Slider {...settings} className="slider">
           {HeroData.map((item) => (

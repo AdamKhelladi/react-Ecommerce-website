@@ -18,13 +18,13 @@ export default function NavBar() {
     },
     {
       id: 3,
-      name: "About",
-      link: "/#about",
+      name: "Services",
+      link: "/#services",
     },
     {
       id: 4,
-      name: "Blog",
-      link: "/#blog",
+      name: "Blogs",
+      link: "/#blogs",
     },
   ];
 
@@ -32,7 +32,7 @@ export default function NavBar() {
     {
       id: 1,
       name: "Trending Products",
-      link: "/#",
+      link: "/#products",
     },
     {
       id: 2,
@@ -62,7 +62,7 @@ export default function NavBar() {
   }
 
   return (
-    <div className="navbar-container">
+    <div className="navbar-container" id="home">
       <div className="on-left">
         <div className="logo-name">
           <a href="#">ESHOP</a>

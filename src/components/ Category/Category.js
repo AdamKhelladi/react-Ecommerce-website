@@ -41,7 +41,7 @@ const categoryData = [
 
 export default function Category() {
   return (
-    <div className="category-container">
+    <div className="category-container" id="shop">
       <div className="boxes">
         {categoryData.map((box) => (
           <div

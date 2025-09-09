@@ -40,7 +40,7 @@ export default function Services() {
   }
 
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <div className="services">
         {servicesData.map((item) => (
           <div key={item.id} className="service">

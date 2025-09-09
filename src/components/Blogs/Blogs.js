@@ -32,7 +32,7 @@ const blogsData = [
 
 export default function Blogs() {
   return (
-    <div className="blogs-container">
+    <div className="blogs-container" id="blogs">
       <div>
         <h1 className="blogs-title">Our Blogs</h1>
         <p className="blogs-description">Explore Our Blogs</p>

@@ -19,7 +19,7 @@ export default function Partners() {
   ];
 
   return (
-    <div className="partners-container">
+    <div className="partners-container" id="partners">
       {images.map((img, index) => (
         <img
           className={`img-${index + 1}`}

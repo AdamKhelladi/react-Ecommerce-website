@@ -19,13 +19,36 @@ export default function Footer() {
     },
     {
       id: 3,
-      name: "About",
-      link: "/#about",
+      name: "Services",
+      link: "/#services",
     },
     {
       id: 4,
-      name: "Blog",
-      link: "/#blog",
+      name: "Blogs",
+      link: "/#blogs",
+    },
+  ];
+
+  const quickLinks = [
+    {
+      id: 1,
+      name: "Trending Products",
+      link: "/#products",
+    },
+    {
+      id: 2,
+      name: "Best Selling",
+      link: "/#",
+    },
+    {
+      id: 3,
+      name: "Top Rated",
+      link: "/#",
+    },
+    {
+      id: 3,
+      name: "Partners",
+      link: "/#partners",
     },
   ];
 
@@ -59,7 +82,7 @@ export default function Footer() {
 
         <div className="quick-links">
           <h1>Quick Links</h1>
-          {MenuLinks.map((item) => (
+          {quickLinks.map((item) => (
             <div>
               <a href={item.link}>{item.name}</a>
             </div>

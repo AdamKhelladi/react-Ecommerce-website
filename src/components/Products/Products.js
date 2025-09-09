@@ -82,7 +82,7 @@ export default function Products() {
   }
 
   return (
-    <div className="products-container">
+    <div className="products-container" id="products">
       <div>
         <h1 className="products-title">Our Products</h1>
         <p className="products-description">Explore Our Products</p>
