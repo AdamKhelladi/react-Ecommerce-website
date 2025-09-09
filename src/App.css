@@ -18,7 +18,7 @@
   --bg-secondary: #253246c9;
   --text-primary: #ffffff;
   --text-secondary: #bcbfc4;
-  --border-color: #6b7280;
+  --border-color: #373e4b;
   --accent-color: #ff0000;
   --accent-color-hover: #da0000;
   --gradient-color-one: #141a29;
@@ -43,6 +43,7 @@
   padding: 0 20px;
 
   font-family: "Oswald", sans-serif;
+  position: relative;
 }
 
 /* Media Responsive */

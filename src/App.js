@@ -11,6 +11,8 @@ import Products from "./components/Products/Products";
 import Blogs from "./components/Blogs/Blogs";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
+import Popup from "./components/Popup/Popup";
+import { useState } from "react";
 
 const bannerOneData = {
   discount: "30% OFF",
@@ -38,11 +40,18 @@ const bannerTwoData = {
 };
 
 function App() {
+
+  const [orderPopup, setOrderPopup] = useState(false);
+
+  function handleClickOrder() {
+    setOrderPopup(!orderPopup);
+  }
+
   return (
     <div className="App">
       <div className="project-container">
-        <NavBar />
-        <Hero />
+        <NavBar handleClickOrder={handleClickOrder}/>
+        <Hero handleClickOrder={handleClickOrder}/>
         <Category />
         <Services />
         <Banner bannerData={bannerOneData} />
@@ -51,6 +60,7 @@ function App() {
         <Blogs />
         <Partners />
         <Footer />
+        <Popup orderPopup={orderPopup} handleClickOrder={handleClickOrder}/>
       </div>
     </div>
   );

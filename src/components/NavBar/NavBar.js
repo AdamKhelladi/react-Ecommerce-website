@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import DarkMode from "../DarkMode";
 
-export default function NavBar() {
+export default function NavBar({ handleClickOrder }) {
   const MenuLinks = [
     {
       id: 1,
@@ -87,7 +87,11 @@ export default function NavBar() {
               <div className="quick-links-name">
                 <a href="#">Quick Links</a>
                 <span>
-                  <FaCaretDown className={showQuickLinks ? "caret-down rotat-caret" : "caret-down"} />
+                  <FaCaretDown
+                    className={
+                      showQuickLinks ? "caret-down rotat-caret" : "caret-down"
+                    }
+                  />
                 </span>
               </div>
               {showQuickLinks ? (
@@ -120,7 +124,7 @@ export default function NavBar() {
         </div>
         <div className="icons">
           <button className="cart-icon">
-            <FaCartShopping className="cart-shopping" />
+            <FaCartShopping className="cart-shopping" onClick={handleClickOrder}/>
             <div className="orders">4</div>
           </button>
           <div className="dark-mode">
