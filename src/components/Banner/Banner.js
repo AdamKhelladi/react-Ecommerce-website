@@ -10,28 +10,32 @@ export default function Banner({ bannerData }) {
       }
     >
       <div className="left-details">
-        <p>{bannerData.discount}</p>
-        <h1>{bannerData.title}</h1>
-        <p>{bannerData.date}</p>
+        <p data-aos="slide-right">{bannerData.discount}</p>
+        <h1 data-aos="zoom-out">{bannerData.title}</h1>
+        <p data-aos="fade-up">{bannerData.date}</p>
       </div>
 
-      <div className="banner-img">
+      <div data-aos="zoom-in" className="banner-img">
         <img src={bannerData.img} alt={bannerData.title} />
       </div>
 
       <div className="right-details">
-        <p className="first-p">{bannerData.rightSubtitle}</p>
-        <h1>{bannerData.rightTitle}</h1>
-        <p>{bannerData.description}</p>
-        <button
-          className={
-            bannerData.itemColor === "red"
-              ? "banner-btn red"
-              : "banner-btn green"
-          }
-        >
-          {bannerData.buttonText}
-        </button>
+        <p data-aos="zoom-out" className="first-p">
+          {bannerData.rightSubtitle}
+        </p>
+        <h1 data-aos="fade-up">{bannerData.rightTitle}</h1>
+        <p data-aos="fade-up">{bannerData.description}</p>
+        <div data-aos="fade-up" data-aos-offset="0">
+          <button
+            className={
+              bannerData.itemColor === "red"
+                ? "banner-btn red"
+                : "banner-btn green"
+            }
+          >
+            {bannerData.buttonText}
+          </button>
+        </div>
       </div>
     </div>
   );
