@@ -16,48 +16,56 @@ const productsData = [
     name: "Boat Rockerz 450",
     price: "$120",
     img: image1,
+    aosDelay: 0,
   },
   {
     id: 2,
     name: "Smart Watch",
     price: "$150",
     img: image2,
+    aosDelay: 200,
   },
   {
     id: 3,
     name: "JBL Tune 760NC",
     price: "$180",
     img: image3,
+    aosDelay: 400,
   },
   {
     id: 4,
     name: "Skullcandy Crusher Evo",
     price: "$200",
     img: image4,
+    aosDelay: 600,
   },
   {
     id: 5,
     name: "Sennheiser HD 450BT",
     price: "$170",
     img: image5,
+    aosDelay: 800,
   },
   {
     id: 6,
     name: "Beats Studio3 Wireless",
     price: "$300",
     img: image6,
+    aosDelay: 1000,
   },
   {
     id: 7,
     name: "AKG K371",
     price: "$150",
     img: image7,
+    aosDelay: 1200,
   },
   {
     id: 8,
     name: "Anker Soundcore Life Q35",
     price: "$130",
     img: image8,
+    aosDelay: 1400,
   },
 ];
 
@@ -89,7 +97,12 @@ export default function Products() {
       </div>
       <div className="boxes">
         {productsData.map((item) => (
-          <div key={item.id} className="box">
+          <div
+            data-aos="fade-up"
+            data-aos-delay={item.aosDelay}
+            key={item.id}
+            className="box"
+          >
             <div
               className="product-img"
               onMouseEnter={() => {
