@@ -56,13 +56,22 @@ function App() {
   const [orders, setOrders] = useState(
     Number(localStorage.getItem("orders")) || 0
   );
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("orders", orders);
   }, [orders]);
 
-  function handleProductsInCart() {
+  function addToCart(product) {
     setOrders(orders + 1);
+
+    if (!cartItems.includes(product)) {
+      setCartItems([...cartItems, product]);
+    }
+  }
+
+  function deleteProduct(product) {
+    setCartItems(cartItems.filter((item) => item.id !== product.id));
   }
 
   useEffect(() => {
@@ -91,7 +100,7 @@ function App() {
                   <Category />
                   <Services />
                   <Banner bannerData={bannerOneData} />
-                  <Products handleProductsInCart={handleProductsInCart} />
+                  <Products addToCart={addToCart} />
                   <Banner bannerData={bannerTwoData} />
                   <Blogs />
                   <Partners />
@@ -104,7 +113,12 @@ function App() {
               }
             ></Route>
 
-            <Route path="/cart" element={<Cart />}></Route>
+            <Route
+              path="/cart"
+              element={
+                <Cart cartItems={cartItems} deleteProduct={deleteProduct} />
+              }
+            ></Route>
           </Routes>
         </div>
       </div>

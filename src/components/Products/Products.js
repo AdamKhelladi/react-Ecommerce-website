@@ -69,7 +69,7 @@ const productsData = [
   },
 ];
 
-export default function Products({ handleProductsInCart }) {
+export default function Products({ addToCart }) {
   const [showProductHover, setShowProductHover] = useState(null);
   const [showButton, setShowButton] = useState(null);
 
@@ -96,7 +96,7 @@ export default function Products({ handleProductsInCart }) {
         <p className="products-description">Explore Our Products</p>
       </div>
       <div className="boxes">
-        {productsData.map((item) => (
+        {productsData.map((item, index) => (
           <div
             data-aos="fade-up"
             data-aos-delay={item.aosDelay}
@@ -120,7 +120,12 @@ export default function Products({ handleProductsInCart }) {
                 alt={item.name}
               />
               {showButton === item.id ? (
-                <button className="product-btn" onClick={handleProductsInCart}>
+                <button
+                  className="product-btn"
+                  onClick={() => {
+                    addToCart(item);
+                  }}
+                >
                   Add to cart
                 </button>
               ) : null}

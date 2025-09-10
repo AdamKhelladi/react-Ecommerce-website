@@ -31,22 +31,22 @@ export default function Footer() {
 
   const quickLinks = [
     {
-      id: 1,
+      id: 5,
       name: "Trending Products",
       link: "/#products",
     },
     {
-      id: 2,
+      id: 6,
       name: "Best Selling",
       link: "/#",
     },
     {
-      id: 3,
+      id: 7,
       name: "Top Rated",
       link: "/#",
     },
     {
-      id: 3,
+      id: 8,
       name: "Partners",
       link: "/#partners",
     },
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="imp-links">
           <h1>Important Links</h1>
           {MenuLinks.map((item) => (
-            <div>
+            <div key={item.id}>
               <a href={item.link}>{item.name}</a>
             </div>
           ))}
@@ -83,7 +83,7 @@ export default function Footer() {
         <div className="quick-links">
           <h1>Quick Links</h1>
           {quickLinks.map((item) => (
-            <div>
+            <div key={item.id}>
               <a href={item.link}>{item.name}</a>
             </div>
           ))}
