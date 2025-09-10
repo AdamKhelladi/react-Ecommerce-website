@@ -156,14 +156,14 @@
 }
 
 .navbar-container .orders {
-  content: "4";
+  content: "";
   position: absolute;
   top: -8px;
   right: -8px;
   background-color: var(--accent-color);
   color: #fff;
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   display: flex;
   align-items: center;

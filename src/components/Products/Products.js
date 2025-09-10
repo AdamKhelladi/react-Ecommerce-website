@@ -69,7 +69,7 @@ const productsData = [
   },
 ];
 
-export default function Products() {
+export default function Products({ handleProductsInCart }) {
   const [showProductHover, setShowProductHover] = useState(null);
   const [showButton, setShowButton] = useState(null);
 
@@ -120,7 +120,9 @@ export default function Products() {
                 alt={item.name}
               />
               {showButton === item.id ? (
-                <button className="product-btn">Add to cart</button>
+                <button className="product-btn" onClick={handleProductsInCart}>
+                  Add to cart
+                </button>
               ) : null}
             </div>
             <div className="product-details">

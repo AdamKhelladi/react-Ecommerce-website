@@ -49,12 +49,24 @@ function App() {
     setOrderPopup(!orderPopup);
   }
 
+  const [orders, setOrders] = useState(
+    Number(localStorage.getItem("orders")) || 0
+  );
+
+  useEffect(() => {
+    localStorage.setItem("orders", orders);
+  }, [orders]);
+
+  function handleProductsInCart() {
+    setOrders(orders + 1);
+  }
+
   useEffect(() => {
     AOS.init({
       duration: 800,
       easing: "ease-in-sine",
       delay: 100,
-      offset: 100
+      offset: 100,
     });
     AOS.refresh();
   }, []);
@@ -62,12 +74,12 @@ function App() {
   return (
     <div className="App">
       <div className="project-container">
-        <NavBar handleClickOrder={handleClickOrder} />
+        <NavBar handleClickOrder={handleClickOrder} orders={orders} />
         <Hero handleClickOrder={handleClickOrder} />
         <Category />
         <Services />
         <Banner bannerData={bannerOneData} />
-        <Products />
+        <Products handleProductsInCart={handleProductsInCart} />
         <Banner bannerData={bannerTwoData} />
         <Blogs />
         <Partners />
