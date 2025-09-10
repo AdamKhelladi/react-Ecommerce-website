@@ -4,6 +4,8 @@ import { useState } from "react";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import DarkMode from "../DarkMode";
 
+import { useNavigate } from "react-router-dom";
+
 export default function NavBar({ handleClickOrder, orders }) {
   const MenuLinks = [
     {
@@ -49,6 +51,8 @@ export default function NavBar({ handleClickOrder, orders }) {
   const [showInputSearch, setShowInputSearch] = useState(false);
   const [showQuickLinks, setShowQuickLinks] = useState(false);
 
+  const navigate = useNavigate();
+
   function handleClickSearch() {
     setShowInputSearch(!showInputSearch);
   }
@@ -59,6 +63,10 @@ export default function NavBar({ handleClickOrder, orders }) {
 
   function handleLeaveQuickLinks() {
     setShowQuickLinks(false);
+  }
+
+  function handleClickCart() {
+    navigate("/cart");
   }
 
   return (
@@ -126,7 +134,9 @@ export default function NavBar({ handleClickOrder, orders }) {
           <button className="cart-icon">
             <FaCartShopping
               className="cart-shopping"
-              onClick={handleClickOrder}
+              onClick={() => {
+                handleClickCart();
+              }}
             />
             <div className="orders">{orders}</div>
           </button>

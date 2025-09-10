@@ -16,6 +16,8 @@ import Cart from "./components/Cart/Cart";
 
 import { useEffect, useState } from "react";
 
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -74,23 +76,39 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="project-container">
-        <NavBar handleClickOrder={handleClickOrder} orders={orders} />
-        <Hero handleClickOrder={handleClickOrder} />
-        <Category />
-        <Services />
-        <Banner bannerData={bannerOneData} />
-        <Products handleProductsInCart={handleProductsInCart} />
-        <Banner bannerData={bannerTwoData} />
-        <Blogs />
-        <Partners />
-        <Footer />
-        <Popup orderPopup={orderPopup} handleClickOrder={handleClickOrder} />
+    <BrowserRouter>
+      <div className="App">
+        <div className="project-container">
+          <NavBar handleClickOrder={handleClickOrder} orders={orders} />
 
-        <Cart />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  {" "}
+                  <Hero handleClickOrder={handleClickOrder} />
+                  <Category />
+                  <Services />
+                  <Banner bannerData={bannerOneData} />
+                  <Products handleProductsInCart={handleProductsInCart} />
+                  <Banner bannerData={bannerTwoData} />
+                  <Blogs />
+                  <Partners />
+                  <Footer />
+                  <Popup
+                    orderPopup={orderPopup}
+                    handleClickOrder={handleClickOrder}
+                  />
+                </>
+              }
+            ></Route>
+
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
