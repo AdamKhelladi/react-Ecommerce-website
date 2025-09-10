@@ -92,11 +92,11 @@ export default function Footer() {
         <div className="address">
           <h1>Address</h1>
           <div className="location">
-            <FaMapLocationDot />
+            <FaMapLocationDot className="info-icon"/>
             <p>Ras El Oued, Algeria</p>
           </div>
           <div className="phone">
-            <IoMdPhonePortrait />
+            <IoMdPhonePortrait className="info-icon"/>
             <p>+213 1234567890</p>
           </div>
           <div className="social-media">

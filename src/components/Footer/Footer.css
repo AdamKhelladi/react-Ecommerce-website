@@ -84,6 +84,10 @@
   gap: 10px;
 }
 
+.footer-container .left-footer .address .info-icon {
+  font-size: 18px;
+}
+
 .footer-container .left-footer .address .social-media {
   display: flex;
   gap: 10px;
