@@ -138,3 +138,15 @@
     margin-bottom: 10px;
   }
 }
+
+@media (max-width: 500px) {
+  .cart-items .product {
+    height: 100px;
+    gap: 10px;
+
+  }
+  .cart-items .product img {
+    width: 130px;
+    height: 100%;
+  }
+}

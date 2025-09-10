@@ -48,23 +48,14 @@ const bannerTwoData = {
 
 function App() {
   const [orderPopup, setOrderPopup] = useState(false);
+  const [orders, setOrders] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
   function handleClickOrder() {
     setOrderPopup(!orderPopup);
   }
 
-  const [orders, setOrders] = useState(
-    Number(localStorage.getItem("orders")) || 0
-  );
-  const [cartItems, setCartItems] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem("orders", orders);
-  }, [orders]);
-
   function addToCart(product) {
-    setOrders(orders + 1);
-
     if (!cartItems.includes(product)) {
       setCartItems([...cartItems, product]);
     }
@@ -73,6 +64,10 @@ function App() {
   function deleteProduct(product) {
     setCartItems(cartItems.filter((item) => item.id !== product.id));
   }
+
+  useEffect(() => {
+    setOrders(cartItems.length);
+  }, [cartItems]);
 
   useEffect(() => {
     AOS.init({
