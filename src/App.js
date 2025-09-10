@@ -12,6 +12,8 @@ import Blogs from "./components/Blogs/Blogs";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
+import Cart from "./components/Cart/Cart";
+
 import { useEffect, useState } from "react";
 
 import AOS from "aos";
@@ -85,6 +87,8 @@ function App() {
         <Partners />
         <Footer />
         <Popup orderPopup={orderPopup} handleClickOrder={handleClickOrder} />
+
+        <Cart />
       </div>
     </div>
   );
