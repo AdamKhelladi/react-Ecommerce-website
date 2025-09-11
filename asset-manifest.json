@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/react-Ecommerce-website/static/css/main.02d09746.css",
+    "main.js": "/react-Ecommerce-website/static/js/main.3808ab1d.js",
+    "static/js/453.d362fc7d.chunk.js": "/react-Ecommerce-website/static/js/453.d362fc7d.chunk.js",
+    "static/media/smartwatch2-removebg-preview.png": "/react-Ecommerce-website/static/media/smartwatch2-removebg-preview.9bc873db942b07aba006.png",
+    "static/media/headphone.png": "/react-Ecommerce-website/static/media/headphone.6abce47d92bd0cd186c1.png",
+    "static/media/macbook.png": "/react-Ecommerce-website/static/media/macbook.4cca2e0e286afbff0db2.png",
+    "static/media/vr.png": "/react-Ecommerce-website/static/media/vr.8e6768c52dc1a63084d6.png",
+    "static/media/dark-mode-button.png": "/react-Ecommerce-website/static/media/dark-mode-button.c5b620c1550b3c201b56.png",
+    "static/media/light-mode-button.png": "/react-Ecommerce-website/static/media/light-mode-button.9ed4504ff522dfde699a.png",
+    "static/media/speaker.png": "/react-Ecommerce-website/static/media/speaker.d75fb146ae53a0dc281f.png",
+    "static/media/p-3.jpg": "/react-Ecommerce-website/static/media/p-3.2c45dfca4ec9a5fd0683.jpg",
+    "static/media/blog-3.jpg": "/react-Ecommerce-website/static/media/blog-3.c642cad1341f58c8791c.jpg",
+    "static/media/p-5.jpg": "/react-Ecommerce-website/static/media/p-5.be2eac8856b1d40b9faf.jpg",
+    "static/media/p-1.jpg": "/react-Ecommerce-website/static/media/p-1.d711f76201ef2f9dbd43.jpg",
+    "static/media/p-4.jpg": "/react-Ecommerce-website/static/media/p-4.d711f76201ef2f9dbd43.jpg",
+    "static/media/p-2.jpg": "/react-Ecommerce-website/static/media/p-2.97267b1969c49df46be4.jpg",
+    "static/media/p-9.jpg": "/react-Ecommerce-website/static/media/p-9.a3b781c9e6029f256189.jpg",
+    "static/media/p-7.jpg": "/react-Ecommerce-website/static/media/p-7.b1eca2de3355b34981eb.jpg",
+    "static/media/blog-2.jpg": "/react-Ecommerce-website/static/media/blog-2.fe42d2e289717666edec.jpg",
+    "static/media/blog-1.jpg": "/react-Ecommerce-website/static/media/blog-1.19fa53c49eb4e48da165.jpg",
+    "static/media/gaming.png": "/react-Ecommerce-website/static/media/gaming.8950ba32f692a1916413.png",
+    "static/media/earphone.png": "/react-Ecommerce-website/static/media/earphone.bf113e226fccb2d0d1aa.png",
+    "static/media/watch.png": "/react-Ecommerce-website/static/media/watch.fcc1b6970324a0652ffc.png",
+    "static/media/slick.svg": "/react-Ecommerce-website/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/react-Ecommerce-website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/react-Ecommerce-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/react-Ecommerce-website/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/react-Ecommerce-website/index.html",
+    "main.02d09746.css.map": "/react-Ecommerce-website/static/css/main.02d09746.css.map",
+    "main.3808ab1d.js.map": "/react-Ecommerce-website/static/js/main.3808ab1d.js.map",
+    "453.d362fc7d.chunk.js.map": "/react-Ecommerce-website/static/js/453.d362fc7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02d09746.css",
+    "static/js/main.3808ab1d.js"
+  ]
+}
