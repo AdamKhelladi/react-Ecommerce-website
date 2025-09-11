@@ -5,6 +5,28 @@ import { useEffect, useState } from "react";
 
 export default function Cart({ cartItems, deleteProduct }) {
   const [totalPrice, setTotalPrice] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    address: "",
+    phone: "",
+  });
+
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  const isFormValid =
+    cartItems.length > 0 &&
+    formData.name.trim() &&
+    formData.email.trim() &&
+    formData.address.trim() &&
+    formData.phone.trim();
+
+  function handleSubmitBtn() {
+    localStorage.removeItem("cartItemsObject");
+    // window.location.reload();
+  }
 
   useEffect(() => {
     const total = cartItems.reduce(
@@ -62,31 +84,44 @@ export default function Cart({ cartItems, deleteProduct }) {
           >
             <input
               type="text"
-              name="customer_name"
+              name="name"
               placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
               required
             />
+
             <input
               type="email"
-              name="customer_email"
+              name="email"
               placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
+
             <input
               type="tel"
-              name="customer_phone"
+              name="phone"
               placeholder="Enter your phone number"
+              value={formData.phone}
+              onChange={handleChange}
               required
             />
+
             <input
               type="text"
-              name="customer_address"
+              name="address"
               placeholder="Enter your address"
+              value={formData.address}
+              onChange={handleChange}
             />
+
             <textarea
-              name="customer_message"
+              name="message"
               placeholder="Enter your message"
-            ></textarea>
+              onChange={handleChange}
+            />
 
             {cartItems.map((item, index) => (
               <div key={index}>
@@ -105,7 +140,12 @@ export default function Cart({ cartItems, deleteProduct }) {
 
             <input type="hidden" name="total_price" value={`${totalPrice}$`} />
 
-            <button type="submit" className="form-btn">
+            <button
+              type="submit"
+              className="form-btn"
+              disabled={!isFormValid}
+              onClick={handleSubmitBtn}
+            >
               Submit
             </button>
           </form>
