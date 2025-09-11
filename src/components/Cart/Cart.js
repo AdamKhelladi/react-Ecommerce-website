@@ -8,7 +8,8 @@ export default function Cart({ cartItems, deleteProduct }) {
 
   useEffect(() => {
     const total = cartItems.reduce(
-      (acc, item) => acc + parseInt(item.price.replace("$", "")), 0
+      (acc, item) => acc + parseInt(item.price.replace("$", "")),
+      0
     );
 
     setTotalPrice(total);
@@ -54,13 +55,60 @@ export default function Cart({ cartItems, deleteProduct }) {
 
         <div className="client-infos">
           <h1>Order Now</h1>
-          <div className="form">
-            <input type="text" placeholder="Enter you name" />
-            <input type="email" placeholder="Enter you email" />
-            <input type="text" placeholder="Enter you address" />
-            <textarea placeholder="Enter your message"></textarea>
-          </div>
-          <button className="form-btn">Submit</button>
+          <form
+            className="form"
+            action="https://formspree.io/f/mvgbljwb"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="customer_name"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              type="email"
+              name="customer_email"
+              placeholder="Enter your email"
+              required
+            />
+            <input
+              type="tel"
+              name="customer_phone"
+              placeholder="Enter your phone number"
+              required
+            />
+            <input
+              type="text"
+              name="customer_address"
+              placeholder="Enter your address"
+            />
+            <textarea
+              name="customer_message"
+              placeholder="Enter your message"
+            ></textarea>
+
+            {cartItems.map((item, index) => (
+              <div key={index}>
+                <input
+                  type="hidden"
+                  name={`product_${index + 1}_name`}
+                  value={item.name}
+                />
+                <input
+                  type="hidden"
+                  name={`product_${index + 1}_price`}
+                  value={item.price}
+                />
+              </div>
+            ))}
+
+            <input type="hidden" name="total_price" value={`${totalPrice}$`} />
+
+            <button type="submit" className="form-btn">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>

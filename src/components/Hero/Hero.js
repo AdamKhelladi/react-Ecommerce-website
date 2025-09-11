@@ -28,7 +28,7 @@ const HeroData = [
   },
 ];
 
-export default function Hero({ handleClickOrder }) {
+export default function Hero() {
   const settings = {
     dots: false,
     infinite: true,
@@ -75,7 +75,7 @@ export default function Hero({ handleClickOrder }) {
                   data-aos-offset="0"
                   data-aos-delay="300"
                 >
-                  <button onClick={handleClickOrder}>Shop By Category</button>
+                  <button><a href="/#shop">Shop By Category</a></button>
                 </div>
               </div>
               <div

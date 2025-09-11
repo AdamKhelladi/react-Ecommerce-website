@@ -68,6 +68,10 @@
   background-color: var(--accent-color-hover);
   transform: scale(1.05);
 }
+.hero-container .slider-content .details button a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .hero-container .slider-content .slide-img img {
   margin-right: 90px;

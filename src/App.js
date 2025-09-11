@@ -106,7 +106,7 @@ function App() {
               element={
                 <>
                   {" "}
-                  <Hero handleClickOrder={handleClickOrder} />
+                  <Hero />
                   <Category />
                   <Services />
                   <Banner bannerData={bannerOneData} />
