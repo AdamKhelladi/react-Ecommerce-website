@@ -95,7 +95,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-Ecommerce-website">
       <div className="App">
         <div className="project-container">
           <NavBar handleClickOrder={handleClickOrder} orders={orders} />
