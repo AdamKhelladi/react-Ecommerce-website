@@ -128,6 +128,8 @@ function App() {
                 <Cart cartItems={cartItems} deleteProduct={deleteProduct} />
               }
             ></Route>
+
+            
           </Routes>
         </div>
       </div>
