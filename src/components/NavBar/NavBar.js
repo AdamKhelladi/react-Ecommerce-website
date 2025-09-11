@@ -8,44 +8,16 @@ import { useNavigate } from "react-router-dom";
 
 export default function NavBar({ handleClickOrder, orders }) {
   const MenuLinks = [
-    {
-      id: 1,
-      name: "Home",
-      link: "/#",
-    },
-    {
-      id: 2,
-      name: "Shop",
-      link: "/#shop",
-    },
-    {
-      id: 3,
-      name: "Services",
-      link: "/#services",
-    },
-    {
-      id: 4,
-      name: "Blogs",
-      link: "/#blogs",
-    },
+    { id: 1, name: "Home", link: "#home" },
+    { id: 2, name: "Shop", link: "#shop" },
+    { id: 3, name: "Services", link: "#services" },
+    { id: 4, name: "Blogs", link: "#blogs" },
   ];
 
   const DropdownLinks = [
-    {
-      id: 1,
-      name: "Trending Products",
-      link: "/#products",
-    },
-    {
-      id: 2,
-      name: "Best Selling",
-      link: "/#",
-    },
-    {
-      id: 3,
-      name: "Top Rated",
-      link: "/#",
-    },
+    { id: 1, name: "Trending Products", link: "#products" },
+    { id: 2, name: "Best Selling", link: "#best-selling" },
+    { id: 3, name: "Top Rated", link: "#top-rated" },
   ];
 
   const [showInputSearch, setShowInputSearch] = useState(false);
