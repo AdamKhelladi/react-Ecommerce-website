@@ -10,22 +10,22 @@ export default function Footer() {
     {
       id: 1,
       name: "Home",
-      link: "/#",
+      link: "#",
     },
     {
       id: 2,
       name: "Shop",
-      link: "/#shop",
+      link: "#shop",
     },
     {
       id: 3,
       name: "Services",
-      link: "/#services",
+      link: "#services",
     },
     {
       id: 4,
       name: "Blogs",
-      link: "/#blogs",
+      link: "#blogs",
     },
   ];
 
@@ -33,22 +33,22 @@ export default function Footer() {
     {
       id: 5,
       name: "Trending Products",
-      link: "/#products",
+      link: "#products",
     },
     {
       id: 6,
       name: "Best Selling",
-      link: "/#",
+      link: "#",
     },
     {
       id: 7,
       name: "Top Rated",
-      link: "/#",
+      link: "#",
     },
     {
       id: 8,
       name: "Partners",
-      link: "/#partners",
+      link: "#partners",
     },
   ];
 
