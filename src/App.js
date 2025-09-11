@@ -75,7 +75,7 @@ function App() {
   }
 
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cartItemsObject") || []) 
+    const storedCart = JSON.parse(localStorage.getItem("cartItemsObject") || "[]") 
     setCartItems(storedCart);
   }, []);
 
