@@ -55,15 +55,29 @@ function App() {
     setOrderPopup(!orderPopup);
   }
 
+  let cart = JSON.parse(localStorage.getItem("cartItemsObject")) || [];
+
   function addToCart(product) {
-    if (!cartItems.includes(product)) {
-      setCartItems([...cartItems, product]);
+    if (!cart.some((item) => item.id === product.id)) {
+      cart.push(product);
+      localStorage.setItem("cartItemsObject", JSON.stringify(cart));
+
+      setCartItems(cart);
     }
   }
 
   function deleteProduct(product) {
-    setCartItems(cartItems.filter((item) => item.id !== product.id));
+    let cart = JSON.parse(localStorage.getItem("cartItemsObject")) || [];
+    cart = cart.filter((item) => item.id !== product.id);
+    localStorage.setItem("cartItemsObject", JSON.stringify(cart));
+
+    setCartItems(cart);
   }
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cartItemsObject") || []) 
+    setCartItems(storedCart);
+  }, []);
 
   useEffect(() => {
     setOrders(cartItems.length);
