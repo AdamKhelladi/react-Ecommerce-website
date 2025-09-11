@@ -2,9 +2,14 @@ import "./NotFound.css";
 
 export default function NotFound() {
   return (
-    <div className="not-found-container">
-      <h1>404</h1>
-      <p>Page Not Found</p>
+    <div className="notfound-container">
+      <h1 className="notfound-title">404</h1>
+      <p className="notfound-text">
+        Oops! The page you are looking for doesn’t exist.
+      </p>
+      <a href="/" className="notfound-button">
+        Go Back Home
+      </a>
     </div>
-  )
+  );
 }

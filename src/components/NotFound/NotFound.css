@@ -1,0 +1,61 @@
+.notfound-container {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-color-one),
+    var(--gradient-color-two),
+    var(--gradient-color-one)
+  );
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  border-radius: 24px;
+}
+
+.notfound-title {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  animation: bounce 1.5s infinite;
+}
+
+.notfound-text {
+  font-size: 1.5rem;
+  margin: 15px 0 30px;
+  opacity: 0.9;
+}
+
+.notfound-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.notfound-button:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

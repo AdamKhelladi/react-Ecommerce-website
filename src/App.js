@@ -20,6 +20,7 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import NotFound from "./components/NotFound/NotFound";
 
 const bannerOneData = {
   discount: "30% OFF",
@@ -129,7 +130,7 @@ function App() {
               }
             ></Route>
 
-            
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
       </div>
