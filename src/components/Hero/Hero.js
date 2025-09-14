@@ -75,7 +75,7 @@ export default function Hero() {
                   data-aos-offset="0"
                   data-aos-delay="300"
                 >
-                  <button><a href="/#shop">Shop By Category</a></button>
+                  <button><a href="#shop">Shop By Category</a></button>
                 </div>
               </div>
               <div
