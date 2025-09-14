@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-Ecommerce-website/static/css/main.02d09746.css",
-    "main.js": "/react-Ecommerce-website/static/js/main.5888a2c3.js",
+    "main.js": "/react-Ecommerce-website/static/js/main.66eaf547.js",
     "static/js/453.d362fc7d.chunk.js": "/react-Ecommerce-website/static/js/453.d362fc7d.chunk.js",
     "static/media/smartwatch2-removebg-preview.png": "/react-Ecommerce-website/static/media/smartwatch2-removebg-preview.9bc873db942b07aba006.png",
     "static/media/headphone.png": "/react-Ecommerce-website/static/media/headphone.6abce47d92bd0cd186c1.png",
@@ -29,11 +29,11 @@
     "static/media/slick.woff": "/react-Ecommerce-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/react-Ecommerce-website/index.html",
     "main.02d09746.css.map": "/react-Ecommerce-website/static/css/main.02d09746.css.map",
-    "main.5888a2c3.js.map": "/react-Ecommerce-website/static/js/main.5888a2c3.js.map",
+    "main.66eaf547.js.map": "/react-Ecommerce-website/static/js/main.66eaf547.js.map",
     "453.d362fc7d.chunk.js.map": "/react-Ecommerce-website/static/js/453.d362fc7d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02d09746.css",
-    "static/js/main.5888a2c3.js"
+    "static/js/main.66eaf547.js"
   ]
 }
