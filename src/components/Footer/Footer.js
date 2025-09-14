@@ -10,7 +10,7 @@ export default function Footer() {
     {
       id: 1,
       name: "Home",
-      link: "#",
+      link: "#home",
     },
     {
       id: 2,
@@ -38,12 +38,12 @@ export default function Footer() {
     {
       id: 6,
       name: "Best Selling",
-      link: "#",
+      link: "#home",
     },
     {
       id: 7,
       name: "Top Rated",
-      link: "#",
+      link: "#home",
     },
     {
       id: 8,
